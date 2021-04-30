@@ -1,1 +1,14 @@
-<h1>This are my projects</h1>
+<div class="container mb-5">
+	<h1>Personal projects</h1>
+
+
+	<div class="cards">
+		<% @projects.each do |project| %>
+			<%= link_to project_path(project) do %>
+				<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= project.img %>')">
+				<h1><%= project.name %></h1>
+				</div>
+			<% end %>
+		<% end %>
+	</div>
+</div>
