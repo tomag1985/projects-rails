@@ -1,0 +1,11 @@
+@import "bootstrap/scss/bootstrap";
+
+@import "projects";
+
+@import "components/banner";
+@import "components/cards";
+
+.responsive {
+  width: 100%;
+  height: auto;
+}
