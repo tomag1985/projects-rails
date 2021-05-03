@@ -1,11 +1,21 @@
 @import "bootstrap/scss/bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
 @import "projects";
-
 @import "components/banner";
 @import "components/cards";
 
 .responsive {
-  width: 100%;
+  width: 80%;
   height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+body {
+  background-color: #E8E9EB;
+  font-family: 'Raleway', sans-serif;
 }
