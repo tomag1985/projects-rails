@@ -9,14 +9,16 @@
   </div>
 </div>
 
-<div class="container">
-  <h1><%= @project.name %></h1>
-  <h2><%= @project.title %></h2>
+<div class="container" style="margin-top: 10px;">
+  <div class="mt-3 mb-2">
+    <i class="fas fa-arrow-left"> </i>
+    <%= link_to "back to home", root_path %>
+  </div>
   <h3>What is this about?</h3>
   <p><%= @project.description %></p>
   <h3>Have a look at the schema:</h3>
 
-  <img src="<%= @project.schema %>" alt="schema" class="responsive">
+  <img src="<%= @project.schema %>" alt="schema" class="responsive" style="margin-bottom: 10px;">
 
   <h3>Is it responsive?</h3>
 
@@ -27,14 +29,18 @@
   <% end %>
 
   <h3>Want some more info?</h3>
-  <p>You can check the platform <a href="<%= @project.href_project %>" target="_blank">here</a>
+  <p>You can check the platform <a href="<%= @project.href_project %>" target="_blank">here</a>. 
 
   <% if @project.name == "BookAdvisor" %>
-    <p>Patience with this one. As we are scraping a lot of things, it may take a couple of minutes to load.</p>  
+    Patience with this one. As we are scraping a lot of things, it may take a couple of minutes to load.
   <% end %>
   </p>
 
+  <% if @project.user %>
+    <p>You can log in as: "<%= @project.user %>". The password is: "<%= @project.password %>" (by the way, this is a fake email <i class="far fa-smile-wink"></i>).</p>
+  <% end %>
+
   <h3>Still want some more info?</h3>
-  <p>You can check the github repository <a href="<%= @project.href_github %>" target="_blank">here</a></p>
+  <p>You can check github repository <a href="<%= @project.href_github %>" target="_blank">here</a></p>
 </div>
 
